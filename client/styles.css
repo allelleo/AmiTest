@@ -1,0 +1,171 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  --padding-header: 10px;
+  --size-0: 56px;
+  --sidebar-width: 200px;
+}
+
+header {
+  background-color: rgb(18, 24, 69);
+  color: #fff;
+  height: var(--size-0);
+}
+
+.header-content {
+  padding: calc(var(--size-0)/8);
+}
+
+.container {
+  position: relative;
+}
+
+.sidebar {
+  position: fixed;
+  top: var(--size-0);
+  /* Высота шапки страницы */
+  left: calc(0px - var(--sidebar-width));
+  width: var(--sidebar-width);
+  height: calc(100vh - var(--size-0));
+  /* Высота страницы минус высота шапки */
+  background-color: #f1f1f1;
+  transition: left 0.3s ease-in-out;
+  overflow-y: auto;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar li a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #000;
+}
+
+.sidebar li a:hover {
+  background-color: #ddd;
+}
+
+.content {
+  padding: calc(var(--padding-header)/2);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.sidebar-toggle {
+  /* position: absolute; */
+  font-size: 24px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  padding: calc(var(--padding-header)/2);
+}
+
+.column {
+  flex-basis: 100%;
+  padding: 10px;
+  background-color: #f1f1f1;
+  border-radius: var(--padding-header);
+  margin: var(--padding-header);
+}
+
+.column h2 {
+  margin-bottom: 10px;  
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  font-size: 16px;
+}
+
+.card p {
+  font-size: 14px;
+}
+
+.hashtag {
+  font-size: 12px;
+  color: #888;
+}
+
+.progress-bar {
+  height: 6px;
+  background-color: #ddd;
+  margin-top: 8px;
+  border-radius: 3px;
+}
+
+.tag {
+  display: flex;
+  flex-direction: row;
+}
+
+.tag-circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  margin-top: 5px;
+  background-color: red;
+}
+
+.tag-text {
+  margin-left: 5px;
+}
+
+.card-users {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+}
+
+.card-user-icon {
+  height: 25px;
+  width: 25px;
+  background-color: #bbb;
+  border-radius: 50%;
+  border: 2px solid black;
+  display: inline-block;
+  margin-left: -10px
+}
+a {
+  outline: none;
+  text-decoration: none;
+  padding: 2px 1px 0;
+}
+
+a:link {
+  color: rgb(18, 24, 69);;
+}
+
+a:visited {
+  color: #16367a;
+}
+
+a:focus {
+  border-bottom: 1px solid;
+  background: #98d0e4;
+}
+
+a:hover {
+  border-bottom: 1px solid;
+  background: #98d0e4;
+}
+
+a:active {
+  background: #16367a;
+  color: #98d0e4;
+}
